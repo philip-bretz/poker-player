@@ -24,6 +24,9 @@ class Rank(StrEnum):
     KING = "king"
 
 
+RANK_NUMERIC: dict[Rank, int] = {rank: i + 1 for i, rank in enumerate(Rank)}
+
+
 @dataclass(frozen=True)
 class Card:
     rank: Rank
